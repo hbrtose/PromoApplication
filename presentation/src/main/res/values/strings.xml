@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Promo Application</string>
+    <string name="preference_desc">Each item will be shown for %d seconds.</string>
+    <string name="api_base_url">https://api.unsplash.com/</string>
+    <string name="api_key">e481de79d02e6d9aa4803092176f8a3bfe3e675d7a3bd3c3ca38784095a90281</string>
+</resources>

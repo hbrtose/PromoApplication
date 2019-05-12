@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PromoAnalogClock">
+        <attr name="faceTint" format="color"/>
+        <attr name="hourTint" format="color"/>
+        <attr name="minuteTint" format="color"/>
+        <attr name="secondTint" format="color"/>
+
+        <attr name="clockAlpha" format="float" />
+    </declare-styleable>
+</resources>
