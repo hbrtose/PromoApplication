@@ -1,9 +1,7 @@
 package com.hubose.promoapplication.di
 
 import androidx.preference.PreferenceManager
-import com.hubose.data.repository.DiskMediaDataStore
-import com.hubose.data.repository.MediaRepositoryImpl
-import com.hubose.data.repository.RemoteImagesDataStore
+import com.hubose.data.repository.*
 import com.hubose.domain.MediaRepository
 import com.hubose.domain.NetworkRepository
 import com.hubose.domain.usecase.CheckInternetConnectivity
@@ -20,7 +18,8 @@ val viewModels = module {
 }
 
 val dataModule = module {
-    single<MediaRepository> { MediaRepositoryImpl(DiskMediaDataStore(androidContext()), RemoteImagesDataStore(get())) }
+    single<MemoryStorage> { DiskMemoryStorage(androidContext()) }
+    single<MediaRepository> { MediaRepositoryImpl(DiskMediaDataStore(get()), RemoteImagesDataStore(get())) }
     single<NetworkRepository> { NetworkRepositoryImpl(androidContext()) }
 }
 

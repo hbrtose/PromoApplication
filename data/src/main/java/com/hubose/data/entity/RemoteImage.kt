@@ -27,7 +27,7 @@ data class RemoteImage(
     @Json(name = "urls")
     val urls: Urls,
     @Json(name = "user")
-    val user: User,
+    val user: User?,
     @Json(name = "width")
     val width: Int
 ) {
